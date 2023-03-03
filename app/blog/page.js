@@ -1,9 +1,6 @@
 export default function Blog() {
   return (
-    <main className="bg-base-200">
-      <div className="flex justify-center">
-        <h1 className='text-5xl'>Blog</h1>
-      </div>
+    <main className="min-h-screen bg-secondary -mt-[4rem] grid content-center text-neutral-content">
       <div className="grid grid-cols-3 gap-4 p-4 rounded-lg">
         <div className="card bg-base shadow-xl image-full">
           <figure><img src="hotwire.jpg" alt="Album"/></figure>
@@ -54,12 +51,6 @@ export default function Blog() {
               <button className="btn btn-primary">Read</button>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="btn-group grid grid-cols-2 pb-4">
-          <button className="btn btn-outline">Previous page</button>
-          <button className="btn btn-outline">Next</button>
         </div>
       </div>
     </main>
