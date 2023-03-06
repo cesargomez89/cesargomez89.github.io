@@ -26,7 +26,7 @@ export default function Navbar() {
       </div>
       <div className="navbar-center">
         <ul className="menu menu-horizontal px-1">
-          <li><a>Portfolio</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><Link href="/blog">Blog</Link></li>
           <li><a href="/resume-cesar-gomez.pdf">Resume</a></li>
         </ul>

@@ -5,7 +5,7 @@ export default function Hero() {
         <div className="max-w-md">
           <h1 className="text-7xl font-title font-bold">Hi there,</h1>
           <p className="text-xl font-title py-6">Looking for a Ruby on Rails developer?</p>
-          <button className="btn btn-primary">Click Here</button>
+          <a className="btn btn-primary" href="#about">Click Here</a>
         </div>
       </div>
     </div>

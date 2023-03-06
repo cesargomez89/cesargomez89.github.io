@@ -6,7 +6,7 @@ import Portfolio from './portfolio/page'
 
 export default function Home() {
   return (
-    <main className="from-accent-content to-accent via-primary bg-gradient-to-br -mt-[4rem]">
+    <main className="min-h-screen from-accent-content to-accent via-primary bg-gradient-to-br -mt-[4rem]">
       <Hero/>
       <About/>
       <Portfolio/>
