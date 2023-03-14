@@ -2,7 +2,7 @@ export default function About(){
   return (
     <div id="about" className="min-h-screen bg-base-100 text-base-content grid grid-cols-2 max-md:grid-cols-1 justify-items-center content-center p-2">
       <div className='max-w-screen-md text-left'>
-        <h3 className="text-4xl font-title font-bold text-center">About me</h3>
+        <h3 className="text-4xl font-title font-bold">About me</h3>
         <p className="py-2">
           As a Senior Ruby on Rails Developer, I have extensive experience in software development and a deep understanding of the Ruby on Rails framework. I am passionate about creating high-quality software following the best practices.
         </p>
@@ -19,9 +19,9 @@ export default function About(){
           Above all, I am passionate about writting code that makes a difference and am committed to using my skills and experience to make a positive impact on the projects I work on.
         </p>
       </div>
-      <div className='max-w-screen-md pt-2'>
-        <h3 className="text-4xl font-title font-bold text-center">Tech Stack</h3>
-        <div className="grid grid-cols-4 max-md:grid-cols-2 bg-base justify-between px-4 text-xl">
+      <div className=' card bg-secondary text-secondary-content max-w-screen-md pt-2'>
+        <h3 className="text-4xl font-title font-bold px-4">Tech Stack</h3>
+        <div className="grid grid-cols-4 max-md:grid-cols-2 justify-between px-4 text-xl">
           <div className="flex flex-col p-6 max-md:p-2">
             <span className="font-bold text-primary">DevOps</span>
             <span>AWS</span>
@@ -61,7 +61,7 @@ export default function About(){
             <span>Conflict Resolution</span>
           </div>
         </div>
-        <div className="card lg:card-side bg-neutral shadow-xl card-compact">
+        <div className="card lg:card-side bg-neutral shadow-xl card-compact rounded-t-none">
           <div className="card-body text-neutral-content">
             <div className="grid grid-cols-2 py-2 text-xl">
               <h3 className="text-4xl font-title font-bold col-span-2 pb-2">Contact Info</h3>
@@ -70,6 +70,7 @@ export default function About(){
               <span>Phone number:</span>   <a className="text-primary-content" href="tel:+523121245820">+523121245820</a>
               <span>E-mail:</span>         <a className="text-primary-content" href="mailto:cesargomez89@gmail.com">cesargomez89@gmail.com</a>
               <span>Linkedin:</span>       <a className="text-primary-content" href="https://www.linkedin.com/in/cesargomez89/">cesargomez89</a>
+              <span>Resume:</span>         <a className="text-primary-content" href="/resume-cesar-gomez.pdf">Download</a>
             </div>
           </div>
         </div>

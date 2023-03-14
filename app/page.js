@@ -9,7 +9,7 @@ export default function Home() {
     <main className="min-h-screen from-accent-content to-accent via-primary bg-gradient-to-br -mt-[4rem]">
       <Hero/>
       <About/>
-      <Portfolio/>
+      {/*<Portfolio/>*/}
     </main>
   )
 }

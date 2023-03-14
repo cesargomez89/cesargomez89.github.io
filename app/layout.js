@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="autumn">
+    <html lang="en" data-theme="autumn" className="scroll-smooth">
       <body>
         <Navbar/>
         {children}

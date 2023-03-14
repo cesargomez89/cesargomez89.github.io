@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from 'next/link'
 import LinkedinIcon from '../icons/linkedin'
 import GithubIcon from '../icons/github'
@@ -8,11 +8,13 @@ import GithubIcon from '../icons/github'
 export default function Navbar() {
   const [navbarClasses, setNavbarClasses] = useState('text-neutral-content')
 
-  document.addEventListener("scroll", () => {
-    const classes = window.scrollY > 0 ? 'bg-base-100 text-base-content shadow-sm' : 'text-neutral-content'
+  useEffect(()=> {
+    document.addEventListener("scroll", () => {
+      const classes = window.scrollY > 0 ? 'bg-base-100 text-base-content shadow-sm' : 'text-neutral-content'
 
-    setNavbarClasses(classes)
-  });
+      setNavbarClasses(classes)
+    });
+  }, [])
 
   return (
     <div className={"navbar sticky top-0 z-30 bg-opacity-90 backdrop-blur transition-all duration-100 " + navbarClasses}>
@@ -26,8 +28,6 @@ export default function Navbar() {
       </div>
       <div className="navbar-center">
         <ul className="menu menu-horizontal px-1">
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><Link href="/blog">Blog</Link></li>
           <li><a href="/resume-cesar-gomez.pdf">Resume</a></li>
         </ul>
       </div>
