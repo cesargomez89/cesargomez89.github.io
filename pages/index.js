@@ -33,8 +33,8 @@ export default function Home() {
         </div>
         <div>
           <div className="grid grid-flow-col gap-4">
-            <a><LinkedinIcon/></a>
-            <a><GithubIcon/></a>
+        <a href="https://www.linkedin.com/in/cesargomez89/"><LinkedinIcon/></a>
+        <a href="https://github.com/cesargomez89"><GithubIcon/></a>
           </div>
         </div>
       </footer>

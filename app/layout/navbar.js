@@ -33,8 +33,8 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="px-1"><LinkedinIcon/></a>
-        <a className="px-1"><GithubIcon/></a>
+        <a href="https://www.linkedin.com/in/cesargomez89/" className="px-1"><LinkedinIcon/></a>
+        <a href="https://github.com/cesargomez89" className="px-1"><GithubIcon/></a>
       </div>
     </div>
   )
