@@ -11,10 +11,11 @@ export default function Navbar() {
   useEffect(()=> {
     document.addEventListener("scroll", () => {
       const classes = window.scrollY > 0 ? 'bg-base-100 text-base-content shadow-sm' : 'text-neutral-content'
+      console.log('hola')
 
       setNavbarClasses(classes)
     });
-  }, [])
+  })
 
   return (
     <div className={"navbar sticky top-0 z-30 bg-opacity-90 backdrop-blur transition-all duration-100 " + navbarClasses}>
