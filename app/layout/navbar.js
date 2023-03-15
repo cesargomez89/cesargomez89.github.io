@@ -28,7 +28,7 @@ export default function Navbar() {
         <Link href="/" className="btn btn-ghost normal-case text-xl">Cesar Gomez</Link>
       </div>
       <div className="navbar-center">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 visible max-sm:invisible">
           <li><a href="/resume-cesar-gomez.pdf">Resume</a></li>
         </ul>
       </div>

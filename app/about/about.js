@@ -67,10 +67,10 @@ export default function About(){
               <h3 className="text-4xl font-title font-bold col-span-2 pb-2">Contact Info</h3>
               <span>Full name:</span>      <span>Cesar Alberto Gomez Carrillo</span>
               <span>Location:</span>       <span>Colima, Mexico</span>
-              <span>Phone number:</span>   <a className="text-primary-content" href="tel:+523121245820">+523121245820</a>
-              <span>E-mail:</span>         <a className="text-primary-content" href="mailto:cesargomez89@gmail.com">cesargomez89@gmail.com</a>
-              <span>Linkedin:</span>       <a className="text-primary-content" href="https://www.linkedin.com/in/cesargomez89/">cesargomez89</a>
-              <span>Resume:</span>         <a className="text-primary-content" href="/resume-cesar-gomez.pdf">Download</a>
+              <span>Phone number:</span>   <a className="underline underline-offset-4" href="tel:+523121245820">+523121245820</a>
+              <span>E-mail:</span>         <a className="underline underline-offset-4" href="mailto:cesargomez89@gmail.com">cesargomez89@gmail.com</a>
+              <span>Linkedin:</span>       <a className="underline underline-offset-4" href="https://www.linkedin.com/in/cesargomez89/">cesargomez89</a>
+              <span>Resume:</span>         <a className="underline underline-offset-4" href="/resume-cesar-gomez.pdf">Download</a>
             </div>
           </div>
         </div>
