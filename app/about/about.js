@@ -1,34 +1,9 @@
 import React, { useState, useEffect, Fragment } from "react";
+import aboutMe from '../../pages/api/about_me'
+import skills from '../../pages/api/skills'
+import contactInfo from '../../pages/api/contact_info'
 
 export default function About(){
-  const [aboutMe, setAboutMe] = useState(null)
-  const [skills, setSkills] = useState(null)
-  const [contactInfo, setContactInfo] = useState(null)
-
-  useEffect(() => {
-    fetch('/api/about_me')
-      .then((res) => res.json())
-      .then((data) => {
-        setAboutMe(data)
-      })
-  }, [])
-
-  useEffect(() => {
-    fetch('/api/skills')
-      .then((res) => res.json())
-      .then((data) => {
-        setSkills(data)
-      })
-  }, [])
-
-  useEffect(() => {
-    fetch('/api/contact_info')
-      .then((res) => res.json())
-      .then((data) => {
-        setContactInfo(data)
-      })
-  }, [])
-
   return (
     <div id="about" className="min-h-screen bg-base-100 text-base-content grid grid-cols-2 max-sm:grid-cols-1 justify-items-center content-center p-2">
       <div className='max-w-screen-md text-left'>
