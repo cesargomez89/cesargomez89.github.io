@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Fragment } from "react";
 
 export default function About(){
-  const [aboutMe, setAboutMe] = useState(null)
+  const [paragraphs, setParagraphs] = useState(null)
   const [skills, setSkills] = useState(null)
   const [contactInfo, setContactInfo] = useState(null)
 
@@ -9,7 +9,7 @@ export default function About(){
     fetch('/api/about_me')
       .then((res) => res.json())
       .then((data) => {
-        setAboutMe(data)
+        setParagraphs(data)
       })
   }, [])
 
@@ -29,14 +29,15 @@ export default function About(){
       })
   }, [])
 
-  if (!aboutMe || !skills || !contactInfo) return <p>No profile data</p>
+  if (!paragraphs) return <p>No profile data</p>
+  if (!skills) return <p>No profile data</p>
 
   return (
     <div id="about" className="min-h-screen bg-base-100 text-base-content grid grid-cols-2 max-sm:grid-cols-1 justify-items-center content-center p-2">
       <div className='max-w-screen-md text-left'>
         <h3 className="text-4xl max-md:text-2xl font-title font-bold">About me</h3>
         {
-          aboutMe.map(({paragraph, index})=> {
+          paragraphs.map(({paragraph, index})=> {
             return <p key={index} className="py-2">{paragraph}</p>
           })
         }
@@ -62,7 +63,7 @@ export default function About(){
               {
                 contactInfo.map(({title, content, url})=>{
 
-                  return <Fragment key={title}>
+                  return <Fragment key={index}>
                     <span>{title}:</span>
                     <a className={url && "underline underline-offset-4"} href={url && "/resume-cesar-gomez.pdf"}>{content}</a>
                   </Fragment>
