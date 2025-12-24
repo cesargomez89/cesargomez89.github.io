@@ -9,7 +9,7 @@ import GithubIcon from '../icons/github'
 export default function Navbar() {
   const [navbarClasses, setNavbarClasses] = useState('text-neutral-content')
 
-  useEffect(()=> {
+  useEffect(() => {
     document.addEventListener("scroll", () => {
       const classes = window.scrollY > 0 ? 'bg-base-100 text-base-content shadow-sm' : 'text-neutral-content'
       setNavbarClasses(classes)
@@ -28,12 +28,12 @@ export default function Navbar() {
       </div>
       <div className="navbar-center">
         <ul className="menu menu-horizontal px-1 visible max-sm:invisible">
-          <li><a href="/resume-cesar-gomez.pdf">Resume</a></li>
+          <li><a href="/Cesar_Gomez_Senior_RoR_Engineer.pdf">Resume</a></li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a href="https://www.linkedin.com/in/cesargomez89/" className="px-1"><LinkedinIcon/></a>
-        <a href="https://github.com/cesargomez89" className="px-1"><GithubIcon/></a>
+        <a href="https://www.linkedin.com/in/cesargomez89/" className="px-1"><LinkedinIcon /></a>
+        <a href="https://github.com/cesargomez89" className="px-1"><GithubIcon /></a>
       </div>
     </div>
   )
