@@ -1,4 +1,4 @@
-export default [
+const skills = [
   {
     category: 'DevOps',
     skills: [
@@ -45,3 +45,5 @@ export default [
     ]
   },
 ]
+
+export default skills;

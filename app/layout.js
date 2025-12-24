@@ -13,22 +13,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="autumn" className="scroll-smooth">
+    <html lang="en" data-theme="dracula" className="scroll-smooth">
       <body>
-        <Navbar/>
+        <Navbar />
         {children}
         <footer className="footer footer-center p-10 bg-primary text-primary-content">
           <div>
-            <HeartIcon/>
+            <HeartIcon />
             <p className="font-bold">
-              From Mexico with love. <br/>Providing Web Development since 2013
+              From Mexico with love. <br />Providing Web Development since 2013
             </p>
             <p>Copyright © 2023 - All right reserved</p>
           </div>
           <div>
             <div className="grid grid-flow-col gap-4">
-              <a><LinkedinIcon/></a>
-              <a><GithubIcon/></a>
+              <a><LinkedinIcon /></a>
+              <a><GithubIcon /></a>
             </div>
           </div>
         </footer>

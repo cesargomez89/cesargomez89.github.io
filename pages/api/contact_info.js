@@ -1,4 +1,4 @@
-export default [
+const contactInfo = [
   {
     title: 'Full name',
     content: 'Cesar Alberto Gomez Carrillo',
@@ -30,3 +30,5 @@ export default [
     url: '/resume-cesar-gomez.pdf',
   },
 ]
+
+export default contactInfo;
