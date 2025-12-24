@@ -4,25 +4,18 @@ import Link from "next/link";
 export default function Portfolio() {
   const projects = [
     {
-      title: "Neovim Dotfiles",
-      description: "Basic Neovim dotfiles made for web development. Optimized for speed and productivity.",
-      image: "/hotwire.jpg",
-      tags: ["Lua", "Vim", "DevTools"],
-      link: "#"
+      title: "KIDD🌀TS",
+      description: "Minimalistic dotfiles designed for productivity and performance. Featuring Kitty terminal, Zsh with Antidote, and a power-user Neovim setup.",
+      image: "/kiddots.png",
+      tags: ["Neovim", "Zsh", "Kitty", "Lua"],
+      link: "https://github.com/cesargomez89/kiddots"
     },
     {
-      title: "Inspiration Dotfiles",
-      description: "Complete dotfiles made for zsh shell using Tmux and Prezto. A fully customized terminal environment.",
-      image: "/hotwire.jpg",
-      tags: ["Zsh", "Shell", "Tmux"],
-      link: "#"
-    },
-    {
-      title: "Offers Bot",
-      description: "Telegram bot to receive offers from Amazon Mexico using AWS Lambda and DynamoDB.",
-      image: "/hotwire.jpg",
-      tags: ["AWS Lambda", "DynamoDB", "Telegram API"],
-      link: "#"
+      title: "DotFlakes",
+      description: "A reproducible NixOS configuration using Flakes and Home Manager. Prioritizes system stability with a polished GNOME desktop environment.",
+      image: "/dotflakes.png",
+      tags: ["NixOS", "Flakes", "Home Manager", "GNOME"],
+      link: "https://github.com/cesargomez89/dotflakes"
     }
   ];
 
@@ -31,13 +24,19 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-            Featured Projects
+            Personal Projects
           </span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="group glass-card overflow-hidden hover:transform hover:scale-105 transition-all duration-300">
+            <Link
+              key={index}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group glass-card overflow-hidden hover:transform hover:scale-105 transition-all duration-300 block"
+            >
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
                   src={project.image}
@@ -69,11 +68,11 @@ export default function Portfolio() {
                   {project.description}
                 </p>
 
-                <button className="text-sm font-semibold text-white/50 group-hover:text-white transition-colors flex items-center gap-2">
+                <div className="text-sm font-semibold text-white/50 group-hover:text-white transition-colors flex items-center gap-2">
                   Read More <span>→</span>
-                </button>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
