@@ -1,40 +1,58 @@
 'use client';
-
-import React, { useState, useEffect } from "react";
-import Link from 'next/link'
-import Image from 'next/image'
-import LinkedinIcon from '../icons/linkedin'
-import GithubIcon from '../icons/github'
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
-  const [navbarClasses, setNavbarClasses] = useState('text-neutral-content')
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      const classes = window.scrollY > 0 ? 'bg-base-100 text-base-content shadow-sm' : 'text-neutral-content'
-      setNavbarClasses(classes)
-    });
-  }, [])
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#portfolio' },
+    { name: 'Contact', href: 'mailto:cesargomez89@gmail.com' },
+  ];
 
   return (
-    <div className={"navbar sticky top-0 z-30 bg-opacity-90 backdrop-blur transition-all duration-100 " + navbarClasses}>
-      <div className="navbar-start">
-        <div className="avatar">
-          <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-            <Image src="/profile.jpeg" alt="profile" width={64} height={64} />
-          </div>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-4' : 'py-6'
+        }`}
+    >
+      <div className={`mx-auto max-w-7xl px-6 transition-all duration-300 ${scrolled ? 'bg-slate-900/70 backdrop-blur-md border border-white/10 rounded-full shadow-lg mx-4' : 'bg-transparent'
+        }`}>
+        <div className="flex items-center justify-between h-14">
+          <Link href="/" className="text-xl font-bold tracking-tighter text-white">
+            Cesar<span className="text-blue-500"> / </span>Gomez
+          </Link>
+
+          <nav className="hidden md:flex gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+              </a>
+            ))}
+          </nav>
+
+          <a
+            href="/Cesar_Gomez_Senior_RoR_Engineer.pdf"
+            className="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white transition-all bg-white/10 rounded-full hover:bg-white/20 hover:scale-105 border border-white/10"
+          >
+            Resume
+          </a>
         </div>
-        <Link href="/" className="btn btn-ghost normal-case text-xl">Cesar Gomez</Link>
       </div>
-      <div className="navbar-center">
-        <ul className="menu menu-horizontal px-1 visible max-sm:invisible">
-          <li><a href="/Cesar_Gomez_Senior_RoR_Engineer.pdf">Resume</a></li>
-        </ul>
-      </div>
-      <div className="navbar-end">
-        <a href="https://www.linkedin.com/in/cesargomez89/" className="px-1"><LinkedinIcon /></a>
-        <a href="https://github.com/cesargomez89" className="px-1"><GithubIcon /></a>
-      </div>
-    </div>
-  )
+    </header>
+  );
 }

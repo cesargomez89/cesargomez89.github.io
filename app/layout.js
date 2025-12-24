@@ -1,37 +1,19 @@
 import './globals.css'
-import Link from 'next/link'
 import Navbar from './layout/navbar'
-import Hero from './layout/hero'
-import LinkedinIcon from './icons/linkedin'
-import GithubIcon from './icons/github'
-import HeartIcon from './icons/heart'
+import Footer from './layout/footer'
 
 export const metadata = {
-  title: 'Cesar Gomez',
-  description: 'Ruby on Rails Developer',
+  title: 'Cesar Gomez | Senior Ruby on Rails Engineer',
+  description: 'Senior Ruby on Rails Engineer with 12+ years of experience architecting, scaling, and modernizing backend systems.',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="dracula" className="scroll-smooth">
-      <body>
+    <html lang="en" className="scroll-smooth">
+      <body className="antialiased font-sans bg-slate-950 text-slate-200">
         <Navbar />
         {children}
-        <footer className="footer footer-center p-10 bg-primary text-primary-content">
-          <div>
-            <HeartIcon />
-            <p className="font-bold">
-              From Mexico with love. <br />Providing Web Development since 2013
-            </p>
-            <p>Copyright © 2023 - All right reserved</p>
-          </div>
-          <div>
-            <div className="grid grid-flow-col gap-4">
-              <a><LinkedinIcon /></a>
-              <a><GithubIcon /></a>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   )

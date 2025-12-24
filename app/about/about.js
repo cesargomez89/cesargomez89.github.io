@@ -1,50 +1,51 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { Fragment } from "react";
 import aboutMe from '../../pages/api/about_me'
 import skills from '../../pages/api/skills'
-import contactInfo from '../../pages/api/contact_info'
 
 export default function About() {
   return (
-    <div id="about" className="min-h-screen bg-base-100 text-base-content grid grid-cols-2 max-sm:grid-cols-1 justify-items-center content-center p-2">
-      <div className='max-w-screen-md text-left'>
-        <h3 className="text-4xl max-md:text-2xl font-title font-bold">About me</h3>
-        {
-          aboutMe && aboutMe.map(({ paragraph }) => {
-            return <p key={paragraph} className="py-2">{paragraph}</p>
-          })
-        }
-      </div>
-      <div className=' card bg-secondary text-secondary-content max-w-screen-md pt-2'>
-        <h3 className="text-4xl max-md:text-2xl font-title font-bold px-4">Tech Stack</h3>
-        <div className="grid grid-cols-4 max-lg:grid-cols-2 justify-between px-4 text-xl max-md:text-base">
-          {
-            skills && skills.map(({ category, skills }) => {
-              return <div key={category} className="flex flex-col p-4 max-md:p-2">
-                <span className="font-bold text-primary">{category}</span>
-                {
-                  skills.map((skill) => <span key={skill}>{skill}</span>)
-                }
-              </div>
-            })
-          }
-        </div>
-        <div className="card lg:card-side bg-neutral shadow-xl card-compact rounded-t-none">
-          <div className="card-body text-neutral-content">
-            <div className="grid grid-cols-2 py-2 max-lg:text-sm text-xl">
-              <h3 className="text-4xl max-md:text-2xl font-title font-bold col-span-2 pb-2">Contact Info</h3>
-              {
-                contactInfo && contactInfo.map(({ title, content, url }) => {
+    <section id="about" className="py-20 relative">
+      <div className="flex flex-col lg:flex-row gap-16 items-start">
+        {/* About Text */}
+        <div className="flex-1 space-y-8">
+          <h2 className="text-3xl md:text-5xl font-bold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+              About Me
+            </span>
+          </h2>
 
-                  return <Fragment key={title}>
-                    <span className="pl-4 max-md:pl-2">{title}:</span>
-                    <a className={url && "underline underline-offset-4"} href={url && "/Cesar_Gomez_Senior_RoR_Engineer.pdf"}>{content}</a>
-                  </Fragment>
-                })
-              }
+          <div className="space-y-6 text-slate-400 text-lg leading-relaxed">
+            {aboutMe && aboutMe.map(({ paragraph }, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+
+        {/* Skills Grid */}
+        <div className="flex-1 w-full">
+          <div className="glass-card p-8 hover:bg-slate-900/70 transition-colors">
+            <h3 className="text-2xl font-bold mb-8 text-white">Technical Arsenal</h3>
+
+            <div className="space-y-8">
+              {skills && skills.map(({ category, skills }) => (
+                <div key={category}>
+                  <h4 className="text-blue-400 font-semibold mb-3 text-sm uppercase tracking-wider">{category}</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 bg-slate-800/50 hover:bg-blue-500/20 text-slate-300 hover:text-white rounded-full text-sm transition-all border border-slate-700/50 hover:border-blue-500/50 cursor-default"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
