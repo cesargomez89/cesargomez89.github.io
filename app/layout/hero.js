@@ -1,6 +1,24 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 export default function Hero() {
+  const [text, setText] = useState('Robust Backends')
+  const [fade, setFade] = useState(true)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false)
+      setTimeout(() => {
+        setText(prev => prev === 'Robust Backends' ? 'Seamless Frontends' : 'Robust Backends')
+        setFade(true)
+      }, 500) // Wait for fade out
+    }, 4000) // Switch every 4 seconds
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Elements */}
@@ -13,8 +31,8 @@ export default function Hero() {
 
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white animate-fade-in-up delay-100">
           Building Scalable <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
-            Backend Systems
+          <span className={`text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+            {text}
           </span>
         </h1>
 
