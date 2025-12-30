@@ -14,9 +14,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#portfolio' },
+    { name: 'About', href: '/#about' },
+    { name: 'Experience', href: '/#experience' },
+    { name: 'Projects', href: '/#portfolio' },
+    { name: 'Blog', href: '/#blog' },
     { name: 'Contact', href: 'mailto:cesargomez89@gmail.com' },
   ];
 
@@ -34,14 +35,14 @@ export default function Navbar() {
 
           <nav className="hidden md:flex gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
           </nav>
 
