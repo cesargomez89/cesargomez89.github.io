@@ -47,7 +47,7 @@ export default function Navbar() {
           </nav>
 
           <a
-            href="/Cesar_Gomez_Senior_RoR_Engineer.pdf"
+            href="https://github.com/cesargomez89/resume/releases/download/cv-latest/Cesar_Gomez_Senior_RoR_Engineer.pdf"
             className="hidden md:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white transition-all bg-white/10 rounded-full hover:bg-white/20 hover:scale-105 border border-white/10"
           >
             Resume

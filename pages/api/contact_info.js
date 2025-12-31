@@ -27,7 +27,7 @@ const contactInfo = [
   {
     title: 'Resume',
     content: 'Download',
-    url: '/resume-cesar-gomez.pdf',
+    url: 'https://github.com/cesargomez89/resume/releases/download/cv-latest/Cesar_Gomez_Senior_RoR_Engineer.pdf',
   },
 ]
 
