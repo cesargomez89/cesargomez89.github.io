@@ -23,7 +23,7 @@ export default function Portfolio() {
     <section id="portfolio" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e32c22] to-[#e7ad52]">
             Personal Projects
           </span>
         </h2>
@@ -44,8 +44,8 @@ export default function Portfolio() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="px-6 py-2 bg-blue-600 rounded-full text-white font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute inset-0 bg-[#1a1614]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="px-6 py-2 bg-[#e32c22] rounded-full text-white font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     View Project
                   </span>
                 </div>
@@ -54,17 +54,17 @@ export default function Portfolio() {
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="text-xs font-mono text-blue-400 bg-blue-500/10 px-2 py-1 rounded">
+                    <span key={tag} className="text-xs font-mono text-[#e7ad52] bg-[#e7ad52]/10 px-2 py-1 rounded">
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#e7ad52] transition-colors">
                   {project.title}
                 </h3>
 
-                <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                <p className="text-[#d6d3d1]/70 text-sm leading-relaxed mb-4">
                   {project.description}
                 </p>
 

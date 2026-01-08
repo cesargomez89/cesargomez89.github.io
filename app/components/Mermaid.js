@@ -8,20 +8,20 @@ mermaid.initialize({
     startOnLoad: true,
     theme: 'base',
     themeVariables: {
-        primaryColor: '#8b5cf6', // purple-500
-        primaryTextColor: '#fff',
-        primaryBorderColor: '#7c3aed', // purple-600
-        lineColor: '#475569', // slate-500
-        secondaryColor: '#1e293b', // slate-800
-        tertiaryColor: '#0f172a', // slate-900
-        mainBkg: '#0f172a', // slate-900
-        nodeBorder: '#334155', // slate-700
-        clusterBkg: '#1e293b', // slate-800
-        clusterBorder: '#334155', // slate-700
-        defaultLinkColor: '#8b5cf6', // purple-500
-        titleColor: '#f8fafc', // slate-50
-        edgeLabelBackground: '#1e293b', // slate-800
-        nodeTextColor: '#f8fafc', // slate-50
+        primaryColor: '#e32c22', // ruby-red
+        primaryTextColor: '#FAF9F6', // cream
+        primaryBorderColor: '#b3211a', // ruby-red-dark
+        lineColor: '#e7ad52', // ruby-gold
+        secondaryColor: '#2a2624', // warm-card-bg
+        tertiaryColor: '#1a1614', // warm-bg
+        mainBkg: '#1a1614', // warm-bg
+        nodeBorder: '#3d3835', // warm-border
+        clusterBkg: '#2a2624', // warm-card-bg
+        clusterBorder: '#3d3835', // warm-border
+        defaultLinkColor: '#e32c22', // ruby-red
+        titleColor: '#FAF9F6', // cream
+        edgeLabelBackground: '#2a2624', // warm-card-bg
+        nodeTextColor: '#FAF9F6', // cream
     }
 });
 
@@ -48,7 +48,7 @@ const Mermaid = ({ chart }) => {
     }, [chart]);
 
     return (
-        <div className="flex justify-center my-12 p-8 rounded-3xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm overflow-x-auto">
+        <div className="flex justify-center my-12 p-8 rounded-3xl bg-[#2a2624]/50 border border-[#3d3835] backdrop-blur-sm overflow-x-auto">
             <div ref={ref} className="mermaid w-full flex justify-center" />
         </div>
     );

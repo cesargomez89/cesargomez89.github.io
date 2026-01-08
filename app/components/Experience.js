@@ -67,34 +67,34 @@ export default function Experience() {
     <section id="experience" className="py-20 relative">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e32c22] to-[#e7ad52]">
             Professional Experience
           </span>
         </h2>
 
-        <div className="relative border-l border-slate-800 ml-3 md:ml-6 space-y-12">
+        <div className="relative border-l border-[#3d3835] ml-3 md:ml-6 space-y-12">
           {experiences.map((exp, index) => (
             <div key={index} className="relative pl-8 md:pl-12 group">
               {/* Timeline Dot */}
-              <div className="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-blue-500 group-hover:bg-purple-500 group-hover:scale-125 transition-all shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+              <div className="absolute -left-[5px] top-2 w-3 h-3 rounded-full bg-[#e32c22] group-hover:bg-[#e7ad52] group-hover:scale-125 transition-all shadow-[0_0_10px_rgba(227,44,34,0.5)]"></div>
 
-              <div className="glass-card p-6 md:p-8 hover:border-blue-500/30 transition-all duration-300">
+              <div className="glass-card p-6 md:p-8 hover:border-[#e7ad52]/30 transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold text-white max-w-2xl">{exp.role}</h3>
-                    <div className="text-blue-400 font-medium">{exp.company}</div>
+                    <div className="text-[#e7ad52] font-medium">{exp.company}</div>
                   </div>
-                  <div className="text-slate-400 text-sm md:text-base font-mono bg-slate-800/50 px-3 py-1 rounded-full w-fit">
+                  <div className="text-[#d6d3d1]/80 text-sm md:text-base font-mono bg-[#1a1614] px-3 py-1 rounded-full w-fit">
                     {exp.period}
                   </div>
                 </div>
 
-                <p className="text-slate-400 mb-6 italic">{exp.description}</p>
+                <p className="text-[#d6d3d1]/70 mb-6 italic">{exp.description}</p>
 
                 <ul className="space-y-3">
                   {exp.achievements.map((item, i) => (
-                    <li key={i} className="flex items-start text-slate-300 text-sm md:text-base">
-                      <span className="mr-3 text-blue-500 flex-shrink-0">▹</span>
+                    <li key={i} className="flex items-start text-[#FAF9F6]/80 text-sm md:text-base">
+                      <span className="mr-3 text-[#e32c22] flex-shrink-0">▹</span>
                       <span>{item}</span>
                     </li>
                   ))}

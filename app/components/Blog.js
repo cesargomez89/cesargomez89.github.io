@@ -7,11 +7,11 @@ export default function Blog() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="text-3xl md:text-5xl font-bold">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e32c22] via-[#e7ad52] to-[#FAF9F6]">
                             Writings & Insights
                         </span>
                     </h2>
-                    <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-[#d6d3d1]/70 text-lg max-w-2xl mx-auto">
                         Deep dives into software architecture, patterns, and my daily learnings.
                     </p>
                 </div>
@@ -31,12 +31,12 @@ export default function Blog() {
                                         className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
                                     />
                                 ) : (
-                                    <div className="w-full h-full bg-slate-800 flex items-center justify-center">
-                                        <span className="text-slate-600 font-mono italic">No preview available</span>
+                                    <div className="w-full h-full bg-[#1a1614] flex items-center justify-center">
+                                        <span className="text-[#3d3835] font-mono italic">No preview available</span>
                                     </div>
                                 )}
                                 <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <span className="px-6 py-2 bg-purple-600 rounded-full text-white font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                    <span className="px-6 py-2 bg-[#e32c22] rounded-full text-white font-medium transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                                         Read Article
                                     </span>
                                 </div>
@@ -44,7 +44,7 @@ export default function Blog() {
 
                             <div className="p-6">
                                 <div className="flex flex-wrap gap-2 mb-4">
-                                    <span className="text-xs font-mono text-purple-400 bg-purple-500/10 px-2 py-1 rounded">
+                                    <span className="text-xs font-mono text-[#e7ad52] bg-[#e7ad52]/10 px-2 py-1 rounded">
                                         Architecture
                                     </span>
                                     <span className="text-xs font-mono text-slate-500 bg-slate-500/10 px-2 py-1 rounded">
@@ -52,11 +52,11 @@ export default function Blog() {
                                     </span>
                                 </div>
 
-                                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors line-clamp-2">
+                                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#e7ad52] transition-colors line-clamp-2">
                                     {post.title}
                                 </h3>
 
-                                <p className="text-slate-400 text-sm leading-relaxed mb-4 line-clamp-3">
+                                <p className="text-[#d6d3d1]/70 text-sm leading-relaxed mb-4 line-clamp-3">
                                     {post.excerpt}
                                 </p>
 

@@ -26,11 +26,11 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-4' : 'py-6'
         }`}
     >
-      <div className={`mx-auto max-w-7xl px-6 transition-all duration-300 ${scrolled ? 'bg-slate-900/70 backdrop-blur-md border border-white/10 rounded-full shadow-lg mx-4' : 'bg-transparent'
+      <div className={`mx-auto max-w-7xl px-6 transition-all duration-300 ${scrolled ? 'bg-[#2a2624]/80 backdrop-blur-md border border-white/5 rounded-full shadow-lg mx-4' : 'bg-transparent'
         }`}>
         <div className="flex items-center justify-between h-14">
           <Link href="/" className="text-xl font-bold tracking-tighter text-white">
-            Cesar<span className="text-blue-500"> / </span>Gomez
+            Cesar<span className="text-[#e32c22]"> / </span>Gomez
           </Link>
 
           <nav className="hidden md:flex gap-8">
@@ -38,10 +38,10 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
+                className="text-sm font-medium text-[#d6d3d1]/80 hover:text-white transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#e7ad52] transition-all group-hover:w-full"></span>
               </Link>
             ))}
           </nav>

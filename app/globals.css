@@ -7,26 +7,31 @@
 }
 
 :root {
-    --background: #0f172a;
-    --foreground: #f8fafc;
+    --background: #1a1614;
+    --foreground: #FAF9F6;
+    --ruby-red: #e32c22;
+    --ruby-red-dark: #b3211a;
+    --ruby-gold: #e7ad52;
 }
 
 body {
     color: var(--foreground);
     background: var(--background);
+    background-image: radial-gradient(#e7ad5215 1px, transparent 1px);
+    background-size: 40px 40px;
     font-family: var(--font-sans);
 }
 
 @layer utilities {
     .glass {
-        @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl;
+        @apply bg-[#2a2624]/30 backdrop-blur-lg border border-white/5 shadow-xl;
     }
 
     .glass-card {
-        @apply bg-slate-900/60 backdrop-blur-md border border-slate-700/50 shadow-2xl rounded-2xl;
+        @apply bg-[#2a2624]/80 backdrop-blur-md border border-[#3d3835] shadow-2xl rounded-2xl;
     }
 
     .text-gradient {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500;
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-[#e32c22] via-[#e7ad52] to-[#FAF9F6];
     }
 }

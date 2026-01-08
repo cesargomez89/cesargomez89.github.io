@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="antialiased font-sans bg-slate-950 text-slate-200">
+      <body className="antialiased font-sans bg-[#1a1614] text-[#FAF9F6]">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

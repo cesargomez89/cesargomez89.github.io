@@ -57,16 +57,16 @@ export default async function BlogPost({ params }) {
     }
 
     return (
-        <main className="min-h-screen bg-slate-950 text-slate-100 selection:bg-purple-500 selection:text-white">
+        <main className="min-h-screen bg-[#1a1614] text-[#FAF9F6] selection:bg-[#e32c22] selection:text-white">
             <div className="fixed inset-0 z-0 pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-purple-900/20 blur-[120px]" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-blue-900/20 blur-[120px]" />
+                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-red-900/5 blur-[120px]" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-red-900/5 blur-[120px]" />
             </div>
 
             <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
                 <Link
                     href="/#blog"
-                    className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-12 group"
+                    className="inline-flex items-center gap-2 text-[#d6d3d1]/60 hover:text-white transition-colors mb-12 group"
                 >
                     <span className="group-hover:-translate-x-1 transition-transform">←</span>
                     Back to insights
@@ -75,7 +75,7 @@ export default async function BlogPost({ params }) {
                 <article className="space-y-12">
                     <header className="space-y-8">
                         {post.image && (
-                            <div className="relative aspect-[21/9] w-full overflow-hidden rounded-3xl border border-slate-800">
+                            <div className="relative aspect-[21/9] w-full overflow-hidden rounded-3xl border border-[#3d3835]">
                                 <Image
                                     src={post.image}
                                     alt={post.title}
@@ -83,13 +83,13 @@ export default async function BlogPost({ params }) {
                                     className="object-cover"
                                     priority
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1614]/60 to-transparent" />
                             </div>
                         )}
                         <div className="space-y-6">
-                            <div className="flex items-center gap-4 text-purple-400 font-medium">
+                            <div className="flex items-center gap-4 text-[#e7ad52] font-medium">
                                 <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-                                <span className="w-1 h-1 rounded-full bg-slate-700" />
+                                <span className="w-1 h-1 rounded-full bg-[#3d3835]" />
                                 <span>Architecture</span>
                             </div>
                             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
@@ -98,7 +98,7 @@ export default async function BlogPost({ params }) {
                         </div>
                     </header>
 
-                    <div className="prose prose-invert prose-purple max-w-none prose-headings:text-white prose-p:text-slate-300 prose-p:leading-relaxed prose-a:text-purple-400 prose-code:text-purple-300 prose-img:rounded-2xl prose-pre:bg-transparent prose-pre:p-0">
+                    <div className="prose prose-invert prose-red max-w-none prose-headings:text-white prose-p:text-[#d6d3d1]/80 prose-p:leading-relaxed prose-a:text-[#e32c22] prose-code:text-[#e7ad52] prose-img:rounded-2xl prose-pre:bg-transparent prose-pre:p-0">
                         <ReactMarkdown
                             components={{
                                 code({ node, inline, className, children, ...props }) {
@@ -110,13 +110,13 @@ export default async function BlogPost({ params }) {
 
                                     return !inline && match ? (
 
-                                        <div className="rounded-2xl overflow-hidden border border-slate-800 my-8">
-                                            <div className="bg-slate-900 px-4 py-2 border-b border-slate-800 flex justify-between items-center">
-                                                <span className="text-xs font-mono text-slate-400 uppercase tracking-widest">{match[1]}</span>
+                                        <div className="rounded-2xl overflow-hidden border border-[#3d3835] my-8">
+                                            <div className="bg-[#2a2624] px-4 py-2 border-b border-[#3d3835] flex justify-between items-center">
+                                                <span className="text-xs font-mono text-[#5c5450] uppercase tracking-widest">{match[1]}</span>
                                                 <div className="flex gap-1.5">
-                                                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
-                                                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
-                                                    <div className="w-2.5 h-2.5 rounded-full bg-slate-800" />
+                                                    <div className="w-2.5 h-2.5 rounded-full bg-[#1a1614]" />
+                                                    <div className="w-2.5 h-2.5 rounded-full bg-[#1a1614]" />
+                                                    <div className="w-2.5 h-2.5 rounded-full bg-[#1a1614]" />
                                                 </div>
                                             </div>
                                             <SyntaxHighlighter
@@ -136,7 +136,7 @@ export default async function BlogPost({ params }) {
                                             </SyntaxHighlighter>
                                         </div>
                                     ) : (
-                                        <code className={`${className} bg-purple-500/10 px-1.5 py-0.5 rounded text-purple-300 font-mono text-sm`} {...props}>
+                                        <code className={`${className} bg-[#e32c22]/10 px-1.5 py-0.5 rounded text-[#e7ad52] font-mono text-sm`} {...props}>
                                             {children}
                                         </code>
                                     );
